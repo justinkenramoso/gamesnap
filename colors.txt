@@ -1,0 +1,4 @@
+color1 = #08D9D6
+color2 = #252A34
+color3 = #FF2E63
+color4 = #EAEAEA

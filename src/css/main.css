@@ -1,0 +1,77 @@
+#nav {
+  background-color: #252a34;
+  min-height: 10vh;
+}
+
+.navbar-brand {
+  color: #08d9d6;
+}
+
+.nav-link {
+  color: #08d9d6 !important;
+}
+
+#landing {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+#landing::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: black;
+  opacity: 0.5;
+}
+
+.landing-game-info {
+  max-width: 40vw;
+}
+
+@media screen and (max-width: 991px) {
+  .landing-game-info {
+    max-width: unset;
+  }
+}
+.landing-game-title {
+  max-height: 90px;
+  overflow-y: hidden;
+}
+
+.read-more {
+  color: white;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #08d9d6;
+}
+
+.landing-game-thumbnail {
+  border-radius: 8px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #eaeaea;
+  color: white;
+  font-family: "Play", sans-serif;
+}
+
+.odibee {
+  font-family: "Odibee Sans", cursive;
+}
+
+.play {
+  font-family: "Play", sans-serif;
+}/*# sourceMappingURL=main.css.map */

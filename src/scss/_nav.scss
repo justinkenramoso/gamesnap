@@ -1,0 +1,12 @@
+@import "variables";
+
+#nav {
+  background-color: $color2;
+  min-height: 10vh;
+}
+.navbar-brand {
+  color: $color1;
+}
+.nav-link {
+  color: $color1 !important;
+}

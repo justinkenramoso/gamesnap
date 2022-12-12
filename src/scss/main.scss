@@ -1,0 +1,23 @@
+@import "nav";
+@import "home";
+@import "landing";
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: $color4;
+  color: white;
+  font-family: "Play", sans-serif;
+}
+
+.odibee {
+  font-family: "Odibee Sans", cursive;
+}
+.play {
+  font-family: "Play", sans-serif;
+}
