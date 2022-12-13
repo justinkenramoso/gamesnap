@@ -2,3 +2,28 @@ $color1: #08d9d6;
 $color2: #252a34;
 $color3: #ff2e63;
 $color4: #eaeaea;
+
+.color1 {
+  color: $color1;
+}
+.color2 {
+  color: $color2;
+}
+.color3 {
+  color: $color3;
+}
+.color4 {
+  color: $color4;
+}
+.bg1 {
+  background-color: $color1;
+}
+.bg2 {
+  background-color: $color2;
+}
+.bg3 {
+  background-color: $color3;
+}
+.bg4 {
+  background-color: $color4;
+}

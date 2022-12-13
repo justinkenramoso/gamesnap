@@ -1,0 +1,34 @@
+@import "variables";
+
+.accordion-button {
+  background-color: $color2 !important;
+  color: $color4 !important;
+  border-bottom: 2px solid $color4;
+  min-height: 15vh;
+}
+.accordion {
+  border-radius: 0;
+}
+
+.slanted {
+  position: relative;
+  display: inline-block;
+  background: $color2;
+  color: $color2;
+  padding: 5px 15px;
+  z-index: 9;
+}
+.slanted:before {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: $color1;
+  z-index: -1;
+}
+.sl-2:before {
+  width: 120%;
+  transform: skewX(-20deg);
+}

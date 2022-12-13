@@ -3,10 +3,39 @@
 #nav {
   background-color: $color2;
   min-height: 10vh;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
 }
-.navbar-brand {
+.navbar-brand,
+.navbar-brand:hover {
+  font-weight: bold;
   color: $color1;
+  height: 100%;
+  padding: 0 10px;
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all 0.3s;
+}
+.navbar-brand > span {
+  color: $color4;
+}
+.gs-logo {
+  height: 8vh;
 }
 .nav-link {
   color: $color1 !important;
+  font-size: larger;
+  margin: 0 15px;
+  transition: all 0.3s;
+}
+.nav-link:hover {
+  color: $color4 !important;
+}
+.active-nav {
+  border-bottom: 3px solid $color4;
 }

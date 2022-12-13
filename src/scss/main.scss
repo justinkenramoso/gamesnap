@@ -1,8 +1,17 @@
+// Primary Components
 @import "nav";
-@import "home";
-@import "landing";
+@import "error";
 @import "variables";
+@import "header";
 
+// Home
+@import "game-highlight";
+
+// Games
+@import "featuredGames";
+@import "gamesGrid";
+
+// Global CSS
 * {
   padding: 0;
   margin: 0;
@@ -10,14 +19,39 @@
 }
 body {
   overflow-x: hidden;
-  background-color: $color4;
-  color: white;
+  background-color: $color2;
+  color: $color4;
   font-family: "Play", sans-serif;
+  position: relative;
+  padding-top: 10vh;
 }
 
+// Fonts
 .odibee {
   font-family: "Odibee Sans", cursive;
 }
 .play {
   font-family: "Play", sans-serif;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #09d9d6 #262b35;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #262b35;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #09d9d6;
+  border-radius: 5px;
+  border: 0px solid #ffffff;
 }

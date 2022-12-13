@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logoNoBg from "../img/logo-nobg.png";
 
-function Nav() {
+function Nav(props) {
   return (
-    <nav id="nav" className="navbar navbar-expand-lg">
+    <nav id="nav" className="navbar navbar-expand-lg shadow">
       <div className="container">
         <a className="navbar-brand" href="#">
-          GameSnap
+          <img className="gs-logo" src={logoNoBg} alt="" /> <span>Game</span>
+          Snap
         </a>
         <button
           className="navbar-toggler"
@@ -19,16 +22,38 @@ function Nav() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav m-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <Link to={"/"} className={`nav-link ${props.nav[0]}`} href="#">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
+              <Link
+                to={"/games"}
+                className={`nav-link ${props.nav[1]}`}
+                href="#"
+              >
+                Games
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to={"/news"}
+                className={`nav-link ${props.nav[2]}`}
+                href="#"
+              >
+                News
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to={"/giveaways"}
+                className={`nav-link ${props.nav[3]}`}
+                href="#"
+              >
+                Giveaways
+              </Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
