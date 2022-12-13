@@ -2,5 +2,16 @@
 
 #featured-games {
   min-height: 75vh;
-  background-color: $color2;
+}
+.featured-game-card {
+  max-width: 400px;
+}
+.featured-game-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.featured-game-desc {
+  max-height: 70px;
+  overflow-y: hidden;
 }

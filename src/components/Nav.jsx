@@ -4,7 +4,7 @@ import logoNoBg from "../img/logo-nobg.png";
 
 function Nav(props) {
   return (
-    <nav id="nav" className="navbar navbar-expand-lg shadow">
+    <nav id="nav" className="navbar navbar-dark navbar-expand-lg shadow">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="gs-logo" src={logoNoBg} alt="" /> <span>Game</span>
@@ -56,7 +56,7 @@ function Nav(props) {
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex mb-3 mb-lg-0" role="search">
             <input
               className="form-control me-2"
               type="search"
