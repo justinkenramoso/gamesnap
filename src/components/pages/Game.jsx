@@ -4,7 +4,6 @@ import Nav from "../Nav";
 import Footer from "../Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import FeaturedGameCard from "../FeaturedGameCard";
 
 function Game() {
   const { id } = useParams();
@@ -70,19 +69,91 @@ function Game() {
                     <span className="fw-bold">{game.developer}</span>
                   </div>
                 </div>
-                <p className="lead border-1 border p-2 bg-black">
-                  {game.short_description}
-                </p>
+                <p className="lead border-1 p-2">{game.short_description}</p>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 px-3 px-lg-5">
                 <div className=" d-flex justify-content-center align-items-center">
-                  <img
-                    className="w-100"
-                    src={game.thumbnail}
-                    alt=""
-                    style={{ maxWidth: "300px" }}
-                  />
+                  <div
+                    className="row g-0 play-game rounded"
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      window.open(game.game_url, "_blank");
+                    }}
+                  >
+                    <div className="col-10 rounded-start">
+                      <img
+                        className="w-100 rounded-start"
+                        src={game.thumbnail}
+                        alt=""
+                        style={{ maxWidth: "300px" }}
+                      />
+                    </div>
+                    <div className="col-2 bg-black d-flex justify-content-center align-items-center rounded-end">
+                      <i className="fa-solid fa-gamepad fa-2xl"></i>
+                    </div>
+                  </div>
                 </div>
+                {game.screenshots.length == 0 && (
+                  <h5 className="mt-5 text-center">
+                    No screenshots available.
+                  </h5>
+                )}
+                {/* Carousel */}
+                {game.screenshots.length != 0 && (
+                  <div
+                    id="carouselExampleControls"
+                    class="carousel slide mt-5 mb-5 mb-lg-0 border border-1"
+                    data-bs-ride="carousel"
+                  >
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img
+                          src={game.screenshots[0].image}
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src={game.screenshots[1].image}
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item">
+                        <img
+                          src={game.screenshots[2].image}
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleControls"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleControls"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Button1 from "../Button1";
 
 const baseUrl = "https://mmo-games.p.rapidapi.com";
 
@@ -62,12 +63,17 @@ function GameHighlight(props) {
                 </a>
               </p>
               <br />
-              <div className="d-flex justify-content-center">
-                <img
-                  className="highlight-game-thumbnail"
-                  src={highlightGame.thumbnail}
-                  alt="highlight Game Thumbnail"
-                />
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <Button1 className="mb-3">
+                  <h4 className="fw-bold pt-2">
+                    <i className="fa-brands fa-youtube"></i> WATCH TRAILER
+                  </h4>
+                </Button1>
+                <Button1>
+                  <h4 className="fw-bold pt-2">
+                    <i className="fa-solid fa-gamepad"></i> PLAY NOW
+                  </h4>
+                </Button1>
               </div>
             </div>
           </div>
