@@ -4,7 +4,7 @@ import logoNoBg from "../img/logo-nobg.png";
 
 function Nav(props) {
   return (
-    <nav id="nav" className="navbar navbar-dark navbar-expand-lg shadow">
+    <nav id="nav" className="navbar navbar-dark navbar-expand-md">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="gs-logo" src={logoNoBg} alt="" /> <span>Game</span>
@@ -22,7 +22,7 @@ function Nav(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav ms-auto mb-2 mb-md-0 align-items-center">
             <li className="nav-item">
               <Link to={"/"} className={`nav-link ${props.nav[0]}`} href="#">
                 Home
@@ -56,17 +56,6 @@ function Nav(props) {
               </Link>
             </li>
           </ul>
-          <form className="d-flex mb-3 mb-lg-0" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-light" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>

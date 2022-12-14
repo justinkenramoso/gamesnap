@@ -412,8 +412,39 @@
 
 #games-grid {
   min-height: 100vh;
-  background-color: #eaeaea;
-  color: #252a34;
+  background-color: #252a34;
+}
+
+.game-card {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game-card > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  background-color: black;
+  cursor: pointer;
+}
+
+.game-card > content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eaeaea;
+  text-align: center;
+}
+
+.game-card:hover .overlay {
+  opacity: 0.8;
 }
 
 * {

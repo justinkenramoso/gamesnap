@@ -35,13 +35,7 @@ function FeaturedGames(props) {
     <section id="featured-games">
       <div className="container">
         <h2 className="my-3 fw-bold">FEATURED GAME</h2>
-        {!loading && (
-          // <div className="row">
-          <FeaturedGameCard game={gamesList[19]} />
-          //   <FeaturedGameCard index={29} list={gamesList} />
-          //   <FeaturedGameCard index={80} list={gamesList} />
-          // </div>
-        )}
+        {!loading && <FeaturedGameCard game={gamesList[19]} />}
       </div>
     </section>
   );
