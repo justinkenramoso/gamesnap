@@ -207,6 +207,31 @@
   z-index: -1;
 }
 
+.sl:before {
+  width: 120%;
+  transform: skewX(-20deg);
+}
+
+.slanted2 {
+  position: relative;
+  display: inline-block;
+  background: #252a34;
+  color: #252a34;
+  padding: 5px 15px;
+  z-index: 9;
+}
+
+.slanted2:before {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #eaeaea;
+  z-index: -1;
+}
+
 .sl-2:before {
   width: 120%;
   transform: skewX(-20deg);
@@ -329,19 +354,28 @@
   min-height: 75vh;
 }
 
-.featured-game-card {
+.featured-game-img {
+  width: 100%;
   max-width: 400px;
 }
 
-.featured-game-img {
+.featured-game-ul {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  max-width: 400px;
 }
 
-.featured-game-desc {
-  max-height: 70px;
-  overflow-y: hidden;
+.featured-game-ul > * {
+  background-color: #252a34;
+  color: #eaeaea;
+  border: 1px solid #eaeaea;
+}
+
+.featured-game-ul > li > a {
+  transition: all 0.3s;
+}
+
+.featured-game-ul > li > a:hover {
+  color: #eaeaea;
 }
 
 .color1 {
@@ -389,12 +423,16 @@
 }
 
 body {
-  overflow-x: hidden;
   background-color: #252a34;
   color: #eaeaea;
   font-family: "Play", sans-serif;
   position: relative;
   padding-top: 10vh;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 .odibee {

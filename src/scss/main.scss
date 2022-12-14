@@ -18,12 +18,15 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
   background-color: $color2;
   color: $color4;
   font-family: "Play", sans-serif;
   position: relative;
   padding-top: 10vh;
+}
+html,
+body {
+  overflow-x: hidden;
 }
 
 // Fonts

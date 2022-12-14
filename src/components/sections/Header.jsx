@@ -17,7 +17,7 @@ function Header(props) {
             aria-controls={`${props.page}-accordion-collapse`}
           >
             <div className="container d-flex justify-content-center justify-content-lg-between align-items-center">
-              <h2 className="slanted sl-2 fw-bold">
+              <h2 className="slanted sl fw-bold">
                 {props.title} <i className="fa-solid fa-caret-down"></i>
               </h2>
               <h5 className="d-none d-lg-block">{props.headline}</h5>

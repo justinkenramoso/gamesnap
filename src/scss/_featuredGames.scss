@@ -3,15 +3,22 @@
 #featured-games {
   min-height: 75vh;
 }
-.featured-game-card {
-  max-width: 400px;
-}
 .featured-game-img {
   width: 100%;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  max-width: 400px;
 }
-.featured-game-desc {
-  max-height: 70px;
-  overflow-y: hidden;
+.featured-game-ul {
+  width: 100%;
+  max-width: 400px;
+}
+.featured-game-ul > * {
+  background-color: $color2;
+  color: $color4;
+  border: 1px solid $color4;
+}
+.featured-game-ul > li > a {
+  transition: all 0.3s;
+}
+.featured-game-ul > li > a:hover {
+  color: $color4;
 }

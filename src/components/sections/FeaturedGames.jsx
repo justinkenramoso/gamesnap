@@ -23,6 +23,7 @@ function FeaturedGames(props) {
       .then(function (response) {
         setGamesList(response.data);
         setLoading(false);
+        console.log(gamesList);
       })
       .catch(function (error) {
         console.error(error);
@@ -33,13 +34,13 @@ function FeaturedGames(props) {
   return (
     <section id="featured-games">
       <div className="container">
-        <h2 className="my-3 fw-bold">FEATURED GAMES</h2>
+        <h2 className="my-3 fw-bold">FEATURED GAME</h2>
         {!loading && (
-          <div className="row">
-            <FeaturedGameCard index={19} list={gamesList} />
-            <FeaturedGameCard index={29} list={gamesList} />
-            <FeaturedGameCard index={80} list={gamesList} />
-          </div>
+          // <div className="row">
+          <FeaturedGameCard game={gamesList[19]} />
+          //   <FeaturedGameCard index={29} list={gamesList} />
+          //   <FeaturedGameCard index={80} list={gamesList} />
+          // </div>
         )}
       </div>
     </section>
