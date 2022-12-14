@@ -39,6 +39,7 @@
 .read-more {
   color: white;
   text-decoration: none;
+  transition: ease-out 0.3s;
 }
 .read-more:hover {
   color: $color1;

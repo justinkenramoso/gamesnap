@@ -192,7 +192,7 @@
   display: inline-block;
   background: #252a34;
   color: #252a34;
-  padding: 5px 15px;
+  padding: 0 15px;
   z-index: 9;
 }
 
@@ -217,7 +217,7 @@
   display: inline-block;
   background: #252a34;
   color: #252a34;
-  padding: 5px 15px;
+  padding: 0 15px;
   z-index: 9;
 }
 
@@ -307,6 +307,7 @@
 .read-more {
   color: white;
   text-decoration: none;
+  transition: ease-out 0.3s;
 }
 
 .read-more:hover {
@@ -445,6 +446,55 @@
 
 .game-card:hover .overlay {
   opacity: 0.8;
+}
+
+.color1 {
+  color: #08d9d6;
+}
+
+.color2 {
+  color: #252a34;
+}
+
+.color3 {
+  color: #ff2e63;
+}
+
+.color4 {
+  color: #eaeaea;
+}
+
+.bg1 {
+  background-color: #08d9d6;
+}
+
+.bg2 {
+  background-color: #252a34;
+}
+
+.bg3 {
+  background-color: #ff2e63;
+}
+
+.bg4 {
+  background-color: #eaeaea;
+}
+
+#game {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+#game::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: black;
+  opacity: 0.7;
 }
 
 * {

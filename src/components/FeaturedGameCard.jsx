@@ -26,7 +26,8 @@ function FeaturedGameCard(props) {
         <h2 className="fs-1 fw-bold slanted2 sl-2 w-100 text-center text-lg-start mt-5 mt-lg-0">
           {game.title}
         </h2>
-        <p className="lead">{game.short_description}</p>
+        <p className="d-none d-md-block lead">{game.short_description}</p>
+        <p className="d-block d-md-none lead fs-6">{game.short_description}</p>
         <hr />
         <div className="row">
           <div className="col-6">
@@ -35,7 +36,13 @@ function FeaturedGameCard(props) {
           </div>
           <div className="col-6">
             <p>Released {game.release_date}</p>
-            <Button1>View Game</Button1>
+            <Button1
+              onClick={() => {
+                window.location = `/games/${game.id}`;
+              }}
+            >
+              View Game
+            </Button1>
           </div>
         </div>
       </div>

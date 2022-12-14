@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../sections/Header";
 import Nav from "../Nav";
+import Footer from "../Footer";
 
 function Giveaways() {
   return (
@@ -16,6 +17,7 @@ function Giveaways() {
         content3="Get the most out of your gaming experience."
         lead="Get ready to save big on the newest games, consoles, accessories, and more!"
       />
+      <Footer />
     </div>
   );
 }

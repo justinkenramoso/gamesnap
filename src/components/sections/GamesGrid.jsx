@@ -2,10 +2,12 @@ import React from "react";
 import GameCard from "../GameCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Button1 from "../Button1";
 
 function GamesGrid() {
   const [gamesList, setGamesList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [limit, setLimit] = useState(20);
 
   // Get Games List
   const options = {
@@ -31,7 +33,7 @@ function GamesGrid() {
   }, []);
 
   const games = gamesList.map((game, index) => {
-    if (index <= 20) {
+    if (index <= limit) {
       return <GameCard game={game} key={index} />;
     }
   });
@@ -44,6 +46,9 @@ function GamesGrid() {
         {!loading && (
           <div className="row row-cols-2 row-cols-lg-3 g-2 g-md-4">{games}</div>
         )}
+        <div className="d-flex justify-content-center my-5">
+          <Button1 onClick={() => setLimit(limit + 20)}>Load More</Button1>
+        </div>
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ const Button1 = styled.button`
   display: inline-block;
   padding: 2px 15px;
   z-index: 9;
+  border: none;
   &:before {
     position: absolute;
     top: 0;
@@ -18,8 +19,7 @@ const Button1 = styled.button`
     z-index: -1;
     width: 120%;
     transform: skewX(-20deg);
-
-    transition: all 1s;
+    transition: ease-out 0.3s;
   }
   &:hover {
     color: #252a34;

@@ -1,0 +1,18 @@
+@import "variables";
+
+#game {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+#game::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: black;
+  opacity: 0.7;
+}

@@ -3,6 +3,7 @@ import Nav from "../Nav";
 import Header from "../sections/Header";
 import FeaturedGames from "../sections/FeaturedGames";
 import GamesGrid from "../sections/GamesGrid";
+import Footer from "../Footer";
 
 function Games() {
   return (
@@ -21,6 +22,7 @@ function Games() {
       />
       <FeaturedGames highlightID={4} />
       <GamesGrid />
+      <Footer />
     </div>
   );
 }

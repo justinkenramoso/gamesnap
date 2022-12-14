@@ -57,8 +57,8 @@ function GameHighlight(props) {
               </p>
               <p className="lead m-0 p-0">
                 ...{" "}
-                <a className="read-more" href="#">
-                  Read More
+                <a className="read-more" href={`/games/${highlightGameID}`}>
+                  View Game
                 </a>
               </p>
               <br />
