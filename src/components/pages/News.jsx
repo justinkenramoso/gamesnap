@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../Nav";
 import Header from "../sections/Header";
+import NewsGrid from "../sections/NewsGrid";
 import Footer from "../Footer";
 
 function News() {
@@ -17,6 +18,7 @@ function News() {
         content3="Never miss the most innovative trends in gaming."
         lead="So, stay tuned for everything GameSnap has to offer!"
       />
+      <NewsGrid />
       <Footer />
     </div>
   );

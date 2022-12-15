@@ -56,22 +56,25 @@ function GameHighlight(props) {
               <p className="lead highlight-game-desc mb-0">
                 {highlightGame.short_description}
               </p>
-              <p className="lead m-0 p-0">
-                ...{" "}
-                <a className="read-more" href={`/games/${highlightGameID}`}>
-                  View Game
-                </a>
-              </p>
               <br />
               <div className="d-flex flex-column align-items-center justify-content-center">
-                <Button1 className="mb-3">
+                <Button1
+                  className="mb-3"
+                  onClick={() => {
+                    window.open("https://youtu.be/nEbkBJ3hPZ8", "_blank");
+                  }}
+                >
                   <h4 className="fw-bold pt-2">
                     <i className="fa-brands fa-youtube"></i> WATCH TRAILER
                   </h4>
                 </Button1>
-                <Button1>
+                <Button1
+                  onClick={() => {
+                    window.location = "/games/1";
+                  }}
+                >
                   <h4 className="fw-bold pt-2">
-                    <i className="fa-solid fa-gamepad"></i> PLAY NOW
+                    <i className="fa-solid fa-gamepad"></i> VIEW GAME
                   </h4>
                 </Button1>
               </div>

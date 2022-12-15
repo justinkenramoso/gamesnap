@@ -54,22 +54,26 @@ function Game() {
                 </h1>
                 <div className="row mx-auto py-3">
                   <div className="col-6">
-                    Genre: <br /> <span className="fw-bold">{game.genre}</span>
+                    <p className="m-0 p-0">Genre</p>
+                    <h5 className="fw-bold color1">{game.genre}</h5>
                   </div>
                   <div className="col-6">
-                    Publisher: <br />{" "}
-                    <span className="fw-bold">{game.publisher}</span>
+                    <p className="m-0 p-0">Publisher</p>
+                    <h5 className="fw-bold color1">{game.publisher}</h5>
                   </div>
                   <div className="col-6">
-                    Platform: <br />{" "}
-                    <span className="fw-bold">{game.platform}</span>
+                    <p className="m-0 p-0">Platform</p>
+                    <h5 className="fw-bold color1">{game.platform}</h5>
                   </div>
                   <div className="col-6">
-                    Developer: <br />{" "}
-                    <span className="fw-bold">{game.developer}</span>
+                    <p className="m-0 p-0">Developer</p>
+                    <h5 className="fw-bold color1">{game.developer}</h5>
                   </div>
                 </div>
-                <p className="lead border-1 p-2">{game.short_description}</p>
+                <p className="d-none d-lg-block lead p-2">
+                  {game.short_description}
+                </p>
+                <p className="d-block d-lg-none">{game.short_description}</p>
               </div>
               <div className="col-lg-6 px-3 px-lg-5">
                 <div className=" d-flex justify-content-center align-items-center">
@@ -93,64 +97,64 @@ function Game() {
                     </div>
                   </div>
                 </div>
-                {game.screenshots.length == 0 && (
+                {game.screenshots.length < 3 && (
                   <h5 className="mt-5 text-center">
                     No screenshots available.
                   </h5>
                 )}
                 {/* Carousel */}
-                {game.screenshots.length != 0 && (
+                {game.screenshots.length >= 3 && (
                   <div
                     id="carouselExampleControls"
-                    class="carousel slide mt-5 mb-5 mb-lg-0 border border-1"
+                    className="carousel slide mt-5 mb-5 mb-lg-0 border border-1"
                     data-bs-ride="carousel"
                   >
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
                         <img
                           src={game.screenshots[0].image}
-                          class="d-block w-100"
+                          className="d-block w-100"
                           alt="..."
                         />
                       </div>
-                      <div class="carousel-item">
+                      <div className="carousel-item">
                         <img
                           src={game.screenshots[1].image}
-                          class="d-block w-100"
+                          className="d-block w-100"
                           alt="..."
                         />
                       </div>
-                      <div class="carousel-item">
+                      <div className="carousel-item">
                         <img
                           src={game.screenshots[2].image}
-                          class="d-block w-100"
+                          className="d-block w-100"
                           alt="..."
                         />
                       </div>
                     </div>
                     <button
-                      class="carousel-control-prev"
+                      className="carousel-control-prev"
                       type="button"
                       data-bs-target="#carouselExampleControls"
                       data-bs-slide="prev"
                     >
                       <span
-                        class="carousel-control-prev-icon"
+                        className="carousel-control-prev-icon"
                         aria-hidden="true"
                       ></span>
-                      <span class="visually-hidden">Previous</span>
+                      <span className="visually-hidden">Previous</span>
                     </button>
                     <button
-                      class="carousel-control-next"
+                      className="carousel-control-next"
                       type="button"
                       data-bs-target="#carouselExampleControls"
                       data-bs-slide="next"
                     >
                       <span
-                        class="carousel-control-next-icon"
+                        className="carousel-control-next-icon"
                         aria-hidden="true"
                       ></span>
-                      <span class="visually-hidden">Next</span>
+                      <span className="visually-hidden">Next</span>
                     </button>
                   </div>
                 )}
