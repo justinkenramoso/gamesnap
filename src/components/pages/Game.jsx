@@ -175,7 +175,7 @@ function Game() {
               {game.screenshots.length >= 3 && (
                 <div
                   id="carouselExampleControls"
-                  className="carousel slide mb-5 mb-lg-0 border border-1"
+                  className="carousel slide carousel-fade mb-5 mb-lg-0 border border-1"
                   data-bs-ride="carousel"
                   style={{ maxWidth: "700px" }}
                 >

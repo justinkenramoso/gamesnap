@@ -20,7 +20,7 @@ function Games() {
         content3="Whether you're looking for a quick pick-me-up or an intense gaming session, we have something that will suit your needs."
         lead="So what are you waiting for? Check out our library of free games and start playing today!"
       />
-      <FeaturedGames highlightID={4} />
+      <FeaturedGames />
       <GamesGrid />
       <Footer />
     </div>
