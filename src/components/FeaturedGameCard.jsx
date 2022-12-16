@@ -24,11 +24,17 @@ function FeaturedGameCard(props) {
         <hr />
         <div className="row">
           <div className="col-6">
-            <p>Published by {game.publisher}</p>
-            <p>Developed by {game.developer}</p>
+            <p>
+              Published by <span className="color1">{game.publisher}</span>
+            </p>
+            <p>
+              Developed by <span className="color1">{game.developer}</span>
+            </p>
           </div>
           <div className="col-6">
-            <p>Released {game.release_date}</p>
+            <p>
+              Released <span className="color1">{game.release_date}</span>
+            </p>
             <Button1
               onClick={() => {
                 window.location = `/games/${game.id}`;

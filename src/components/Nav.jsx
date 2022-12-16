@@ -6,7 +6,7 @@ function Nav(props) {
   return (
     <nav id="nav" className="navbar navbar-dark navbar-expand-md">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img className="gs-logo" src={logoNoBg} alt="" /> <span>Game</span>
           Snap
         </a>

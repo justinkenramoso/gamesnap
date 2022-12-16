@@ -35,13 +35,9 @@ function FeaturedGames(props) {
   return (
     <section id="featured-games">
       <div className="container">
-        <h2 className="py-3 fw-bold">TOP 3 OF THE WEEK</h2>
+        <h2 className="py-3 fw-bold">FEATURED</h2>
         {loading && <Loading />}
         {!loading && <FeaturedGameCard game={gamesList[31]} />}
-        <hr className="my-5" />
-        {!loading && <FeaturedGameCard game={gamesList[34]} />}
-        <hr className="my-5" />
-        {!loading && <FeaturedGameCard game={gamesList[2]} />}
       </div>
     </section>
   );

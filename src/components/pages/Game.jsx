@@ -48,16 +48,33 @@ function Game() {
   console.log(game);
   $("#desc-div").html(desc);
 
+  // const carousel = game.screenshots.map((image, index) => {
+  //   return (
+  //     <div className="carousel-item">
+  //       <img
+  //         src={game.screenshots[index].image}
+  //         className="d-block w-100"
+  //         alt="..."
+  //       />
+  //     </div>
+  //   );
+  // });
+
   return (
     <div>
       <Nav nav={["", "active-nav", "", ""]} />
       {loading && <Loading />}
       {!loading && (
-        <section id="game" style={{ backgroundImage: bg }}>
+        <section id="game" style={{ backgroundImage: bg }} className="">
           <div className="container py-5">
-            <h1 className="slanted sl fw-bold text-center">{game.title}</h1>
-            <div className="row mt-5">
-              <div className="col-lg-6">
+            <h1
+              className="slanted sl fw-bold text-center"
+              style={{ maxWidth: "400px" }}
+            >
+              {game.title}
+            </h1>
+            <div className="row">
+              <div className="col-lg-6 d-flex flex-column justify-content-center">
                 <div className="row mx-auto py-3">
                   <div className="col-6">
                     <p className="m-0 p-0">Genre</p>
@@ -85,29 +102,23 @@ function Game() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="d-flex flex-column justify-content-center align-items-center h-100">
-                  <div
-                    className="row g-0 play-game rounded"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      window.open(game.game_url, "_blank");
-                    }}
-                  >
-                    <div className="col-10 rounded-start">
-                      <img
-                        className="w-100 rounded-start"
-                        src={game.thumbnail}
-                        alt=""
-                        style={{ maxWidth: "300px" }}
-                      />
-                    </div>
-                    <div className="col-2 bg-black d-flex flex-column justify-content-center align-items-center rounded-end">
-                      <h5 className="pb-2 fw-bold">PLAY</h5>
-                      <i className="m-0 fa-solid fa-gamepad fa-2xl"></i>
-                    </div>
-                  </div>
-                </div>
+              <div className="col-lg-6 d-flex justify-content-center">
+                <video
+                  autoPlay
+                  loop
+                  style={{ maxWidth: "100%" }}
+                  className="border border-2"
+                >
+                  <source
+                    src={`https://www.mmobomb.com/g/${game.id}/videoplayback.webm`}
+                    type="video/webm"
+                  />
+                  <source
+                    src={`https://www.mmobomb.com/g/${game.id}/videoplayback.mp4`}
+                    type="video/mp4"
+                  />
+                  No video available.
+                </video>
               </div>
             </div>
           </div>
@@ -129,7 +140,27 @@ function Game() {
                   }}
                 ></div>
               </div>
-              <div className="col-lg-6 d-flex justify-content-center align-items-center p-5">
+              <div className="col-lg-6 d-flex flex-column justify-content-center align-items-center p-lg-5">
+                <div
+                  className="row g-0 play-game rounded my-5"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    window.open(game.game_url, "_blank");
+                  }}
+                >
+                  <div className="col-10 rounded-start">
+                    <img
+                      className="w-100 rounded-start"
+                      src={game.thumbnail}
+                      alt=""
+                      style={{ maxWidth: "300px" }}
+                    />
+                  </div>
+                  <div className="col-2 bg-black d-flex flex-column justify-content-center align-items-center rounded-end">
+                    <h5 className="pb-2 fw-bold">PLAY</h5>
+                    <i className="m-0 fa-solid fa-gamepad fa-2xl"></i>
+                  </div>
+                </div>
                 {/* System Req */}
                 {!game.hasOwnProperty("minimum_system_requirements") && (
                   <div className="mt-3">
@@ -171,11 +202,11 @@ function Game() {
             <hr />
             <h4 className="text-center">Gameplay Screenshots</h4>
             <div className="d-flex justify-content-center">
-              {game.screenshots.length < 3 && (
+              {game.screenshots.length < 1 && (
                 <h5 className="mt-5 text-center">No screenshots available.</h5>
               )}
               {/* Carousel */}
-              {game.screenshots.length >= 3 && (
+              {game.screenshots.length > 0 && (
                 <div
                   id="carouselExampleControls"
                   className="carousel slide carousel-fade mb-5 mb-lg-0 border border-1"
@@ -183,27 +214,29 @@ function Game() {
                   style={{ maxWidth: "700px" }}
                 >
                   <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img
-                        src={game.screenshots[0].image}
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={game.screenshots[1].image}
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <img
-                        src={game.screenshots[2].image}
-                        className="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
+                    {game.screenshots.map((image, index) => {
+                      if (index == 0) {
+                        return (
+                          <div className="carousel-item active" key={index}>
+                            <img
+                              src={game.screenshots[index].image}
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div className="carousel-item" key={index}>
+                            <img
+                              src={game.screenshots[index].image}
+                              className="d-block w-100"
+                              alt="..."
+                            />
+                          </div>
+                        );
+                      }
+                    })}
                   </div>
                   <button
                     className="carousel-control-prev"
