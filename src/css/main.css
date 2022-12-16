@@ -269,6 +269,58 @@
   background-color: #eaeaea;
 }
 
+.mmobomb {
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease-out 0.3s;
+}
+
+.mmobomb:hover {
+  color: #eaeaea;
+}
+
+.ken {
+  transition: ease-out 0.3s;
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+.ken:hover {
+  color: #08d9d6;
+}
+
+.color1 {
+  color: #08d9d6;
+}
+
+.color2 {
+  color: #252a34;
+}
+
+.color3 {
+  color: #ff2e63;
+}
+
+.color4 {
+  color: #eaeaea;
+}
+
+.bg1 {
+  background-color: #08d9d6;
+}
+
+.bg2 {
+  background-color: #252a34;
+}
+
+.bg3 {
+  background-color: #ff2e63;
+}
+
+.bg4 {
+  background-color: #eaeaea;
+}
+
 .modal-dialog {
   max-width: 800px;
   margin: 30px auto;

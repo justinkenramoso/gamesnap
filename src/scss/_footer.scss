@@ -1,0 +1,18 @@
+@import "variables";
+
+.mmobomb {
+  text-decoration: none;
+  font-weight: bold;
+  transition: ease-out 0.3s;
+}
+.mmobomb:hover {
+  color: $color4;
+}
+.ken {
+  transition: ease-out 0.3s;
+  color: $color4;
+  text-decoration: none;
+}
+.ken:hover {
+  color: $color1;
+}

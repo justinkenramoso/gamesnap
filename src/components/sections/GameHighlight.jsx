@@ -60,16 +60,6 @@ function GameHighlight(props) {
               <br />
               <div className="d-flex flex-column align-items-center justify-content-center">
                 <Button1
-                  className="mb-3"
-                  onClick={() => {
-                    window.open("https://youtu.be/nEbkBJ3hPZ8", "_blank");
-                  }}
-                >
-                  <h4 className="fw-bold pt-2">
-                    <i className="fa-brands fa-youtube"></i> WATCH TRAILER
-                  </h4>
-                </Button1>
-                <Button1
                   onClick={() => {
                     window.location = "/games/1";
                   }}
