@@ -34,15 +34,19 @@ function Header(props) {
             className={`accordion-body ${props.page}-accordion-heading bg2 color4`}
           >
             <div className="container">
-              <h4>{props.welcome}</h4>
-              <h5>
-                <ul>
-                  <li>{props.content1}</li>
-                  <li>{props.content2}</li>
-                  <li>{props.content3}</li>
-                </ul>
-              </h5>
-              <p className="lead">{props.lead}</p>
+              <div className="row">
+                <div className="col-lg-6">
+                  <h4>{props.welcome}</h4>
+                  <h5>
+                    <ul>
+                      <li>{props.content1}</li>
+                      <li>{props.content2}</li>
+                      <li>{props.content3}</li>
+                    </ul>
+                  </h5>
+                  <p className="lead">{props.lead}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

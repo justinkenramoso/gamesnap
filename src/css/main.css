@@ -632,6 +632,51 @@
   text-overflow: ellipsis;
 }
 
+.color1 {
+  color: #08d9d6;
+}
+
+.color2 {
+  color: #252a34;
+}
+
+.color3 {
+  color: #ff2e63;
+}
+
+.color4 {
+  color: #eaeaea;
+}
+
+.bg1 {
+  background-color: #08d9d6;
+}
+
+.bg2 {
+  background-color: #252a34;
+}
+
+.bg3 {
+  background-color: #ff2e63;
+}
+
+.bg4 {
+  background-color: #eaeaea;
+}
+
+#giveaways-grid {
+  min-height: 100vh;
+}
+
+.giveaway-img {
+  transition: ease-out 0.3s;
+}
+
+.giveaway-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 * {
   padding: 0;
   margin: 0;

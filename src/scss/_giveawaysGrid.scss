@@ -1,0 +1,12 @@
+@import "variables";
+
+#giveaways-grid {
+  min-height: 100vh;
+}
+.giveaway-img {
+  transition: ease-out 0.3s;
+}
+.giveaway-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
