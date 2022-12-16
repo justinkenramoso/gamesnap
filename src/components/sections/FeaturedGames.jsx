@@ -23,7 +23,7 @@ function FeaturedGames(props) {
       .then(function (response) {
         setGamesList(response.data);
         setLoading(false);
-        console.log(gamesList);
+        console.log("API called.");
       })
       .catch(function (error) {
         console.error(error);
