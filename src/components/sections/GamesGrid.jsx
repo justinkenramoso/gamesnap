@@ -51,11 +51,15 @@ function GamesGrid() {
       });
   }, [filters]);
 
-  const games = gamesList.map((game, index) => {
-    if (index <= limit) {
-      return <GameCard game={game} key={index} />;
-    }
-  });
+  let games = [];
+
+  if (gamesList.length > 0) {
+    games = gamesList.map((game, index) => {
+      if (index <= limit) {
+        return <GameCard game={game} key={index} />;
+      }
+    });
+  }
 
   return (
     <section id="games-grid">
@@ -64,8 +68,8 @@ function GamesGrid() {
         <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
           <h2 className="fw-bold">Browse Games</h2>
           <div className="d-flex align-items-start">
-            <form className="d-flex flex-column flex-md-row">
-              <div className="filter">
+            <form className="d-flex flex-md-row">
+              <div className="me-2">
                 <label className="form-label m-0" htmlFor="platform">
                   Platform
                 </label>
@@ -84,7 +88,7 @@ function GamesGrid() {
                   <option value="browser">Browser</option>
                 </select>
               </div>
-              <div className="filter">
+              <div className="mx-1">
                 <label className="form-label m-0" htmlFor="category">
                   Category
                 </label>
@@ -124,7 +128,7 @@ function GamesGrid() {
                   <option value="horror">Horror</option>
                 </select>
               </div>
-              <div className="filter">
+              <div className="ms-2">
                 <label className="form-label m-0" htmlFor="sort">
                   Sort By
                 </label>

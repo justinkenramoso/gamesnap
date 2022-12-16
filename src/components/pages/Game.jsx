@@ -139,6 +139,10 @@ function Game() {
                     __html: DOMPurify.sanitize(desc),
                   }}
                 ></div>
+                <em>
+                  All information and media belongs to the
+                  publishers/developers.
+                </em>
               </div>
               <div className="col-lg-6 d-flex flex-column justify-content-center align-items-center p-lg-5">
                 <div
@@ -164,7 +168,19 @@ function Game() {
                 {/* System Req */}
                 {!game.hasOwnProperty("minimum_system_requirements") && (
                   <div className="mt-3">
-                    <h5>No system requirements specified.</h5>
+                    <p>
+                      <em>{game.title}</em> is a{" "}
+                      <span className="color1">browser based game</span> and
+                      should run smoothly on practically any PC with a updated
+                      web-browser.
+                    </p>
+                    <p>
+                      If you have old hardware or software, you may still be
+                      able to play <em>{game.title}</em>, but your game
+                      experience may suffer. For the best gameplay experience,
+                      we recommend the latest versions of Chrome, Firefox, or
+                      Microsoft Edge.
+                    </p>
                   </div>
                 )}
                 {game.hasOwnProperty("minimum_system_requirements") && (

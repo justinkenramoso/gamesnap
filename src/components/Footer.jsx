@@ -6,7 +6,7 @@ function Footer() {
       <hr className="m-0" />
       <div className="py-3">
         <p>
-          Made with{" "}
+          This project was made possible by <br />
           <a
             href="https://www.mmobomb.com/api"
             target="_blank"
