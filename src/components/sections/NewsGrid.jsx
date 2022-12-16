@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import NewsCard from "../NewsCard";
 import Button1 from "../Button1";
+import Loading from "../sections/Loading";
 
 function NewsGrid() {
   const [newsList, setNewsList] = useState([]);
@@ -42,6 +43,7 @@ function NewsGrid() {
     <section id="news-grid">
       <div className="container py-3">
         <h2 className="fw-bold fs-1">Latest Articles</h2>
+        {loading && <Loading />}
         {!loading && (
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4 gx-5 mt-3 px-3 px-lg-5">
             {news}

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import $ from "jquery";
 import * as DOMPurify from "dompurify";
+import Loading from "../sections/Loading";
 
 function Game() {
   const { id } = useParams();
@@ -50,6 +51,7 @@ function Game() {
   return (
     <div>
       <Nav nav={["", "active-nav", "", ""]} />
+      {loading && <Loading />}
       {!loading && (
         <section id="game" style={{ backgroundImage: bg }}>
           <div className="container py-5">
@@ -112,6 +114,7 @@ function Game() {
           <div className="col-lg-6 px-3 px-lg-5"></div>
         </section>
       )}
+
       {!loading && (
         <section id="game-fulldesc">
           <div className="container my-3 mb-5 px-4 px-lg-5">

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import FeaturedGameCard from "../FeaturedGameCard";
+import Loading from "../sections/Loading";
 
 function FeaturedGames(props) {
   const [gamesList, setGamesList] = useState([]);
@@ -35,6 +36,7 @@ function FeaturedGames(props) {
     <section id="featured-games">
       <div className="container">
         <h2 className="py-3 fw-bold">TOP 3 OF THE WEEK</h2>
+        {loading && <Loading />}
         {!loading && <FeaturedGameCard game={gamesList[31]} />}
         <hr className="my-5" />
         {!loading && <FeaturedGameCard game={gamesList[34]} />}

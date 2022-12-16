@@ -3,6 +3,7 @@ import GameCard from "../GameCard";
 import { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import Button1 from "../Button1";
+import Loading from "../sections/Loading";
 
 function GamesGrid() {
   const [gamesList, setGamesList] = useState([]);
@@ -113,14 +114,14 @@ function GamesGrid() {
                   <option value="turn-based">Turn-Based</option>
                   <option value="side-scroller">Side-Scroller</option>
                   <option value="card">Card</option>
-                  <option value=" battle-royale"> Battle-Royale</option>
+                  <option value="battle-royale"> Battle-Royale</option>
                   <option value="mmo">MMO</option>
                   <option value="anime">Anime</option>
                   <option value="fantasy">Fantasy</option>
                   <option value="sci-fi">Sci-fi</option>
                   <option value="fighting">Fighting</option>
                   <option value="tower-defense">Tower-defense</option>
-                  <option value="horro">Horror</option>
+                  <option value="horror">Horror</option>
                 </select>
               </div>
               <div className="filter">
@@ -147,6 +148,7 @@ function GamesGrid() {
             </form>
           </div>
         </div>
+        {loading && <Loading />}
         {!loading && (
           <div className="row row-cols-2 row-cols-lg-3 g-2 g-md-4 mt-5">
             {games}

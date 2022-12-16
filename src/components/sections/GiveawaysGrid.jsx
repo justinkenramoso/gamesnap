@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import GiveawayCard from "../GiveawayCard";
+import Loading from "../sections/Loading";
 
 function GiveawaysGrid() {
   const [giveawayList, setGiveawayList] = useState([]);
@@ -41,6 +42,7 @@ function GiveawaysGrid() {
     <section id="giveaways-grid">
       <div className="container py-3">
         <h2 className="fw-bold">Get 'em before they disappear!</h2>
+        {loading && <Loading />}
         {!loading && (
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 gx-3 gy-5 mt-3">
             {giveaways}

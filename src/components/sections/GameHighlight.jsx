@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Button1 from "../Button1";
+import Loading from "../sections/Loading";
 
 const baseUrl = "https://mmo-games.p.rapidapi.com";
 
@@ -36,7 +37,7 @@ function GameHighlight(props) {
   // --------------------------------------------------------------------->
   return (
     <>
-      {loading && <h2>Loading...</h2>}
+      {loading && <Loading />}
       {!loading && (
         <section
           id="highlight"
